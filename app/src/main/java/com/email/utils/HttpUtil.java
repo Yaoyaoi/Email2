@@ -101,7 +101,7 @@ public class HttpUtil {
 			Multipart mm = new MimeMultipart();// 新建一个MimeMultipart对象用来存放多个BodyPart对象
 			// 设置信件文本内容
 			BodyPart mdp = new MimeBodyPart();// 新建一个存放信件内容的BodyPart对象
-			mdp.setContent(mailContent, "text/html;charset=gb2312");// 给BodyPart对象设置内容和格式/编码方式
+			mdp.setContent(mailContent, "text/html;charset=utf-8");// 给BodyPart对象设置内容和格式/编码方式
 			mm.addBodyPart(mdp);// 将含有信件内容的BodyPart加入到MimeMultipart对象中
 
 			Attachment affInfos;
