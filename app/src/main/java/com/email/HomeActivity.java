@@ -61,20 +61,20 @@ public class HomeActivity extends Activity {
 				//可在这里做点击事件
 				if(groupPosition==0&&childPosition==1){
 					Builder builder=new Builder(HomeActivity.this);
-					builder.setTitle("添加联系人");
+					builder.setTitle(R.string.addNewContact);
 					
 					View view=getLayoutInflater().inflate(R.layout.email_add_address, null);
 					final EditText name=(EditText) view.findViewById(R.id.name);
 					final EditText addr=(EditText) view.findViewById(R.id.address);
 
 					builder.setView(view);
-					builder.setPositiveButton("确定", new OnClickListener() {
+					builder.setPositiveButton(R.string.choose, new OnClickListener() {
 						@Override
 						public void onClick(DialogInterface dialog, int which) {
 							insertAddress(name.getText().toString().trim(),addr.getText().toString().trim());
 						}
 					});
-					builder.setNegativeButton("取消", null);
+					builder.setNegativeButton(R.string.btn_cancel, null);
 					builder.show();
 				}else if(groupPosition==0&&childPosition==0){
 					Intent intent=new Intent(HomeActivity.this, MailConstactsActivity.class);
@@ -113,10 +113,10 @@ public class HomeActivity extends Activity {
 	 */
 	private void insertAddress(String user,String address){
 		if(user==null){
-			Toast.makeText(HomeActivity.this, "用户名不能为空", Toast.LENGTH_SHORT).show();
+			Toast.makeText(HomeActivity.this, R.string.cannotbeempty, Toast.LENGTH_SHORT).show();
 		}else{
 			if(!EmailFormatUtil.emailFormat(address)){
-				Toast.makeText(HomeActivity.this, "邮箱格式不正确", Toast.LENGTH_SHORT).show();
+				Toast.makeText(HomeActivity.this, R.string.wrongaddress, Toast.LENGTH_SHORT).show();
 			}else{
 				Uri uri=Uri.parse("content://com.emailconstantprovider");
 				ContentValues values=new ContentValues();
@@ -125,7 +125,7 @@ public class HomeActivity extends Activity {
 				values.put("address", address);
 				getContentResolver().insert(uri, values);
 				
-				Toast.makeText(HomeActivity.this, "添加数据成功", Toast.LENGTH_SHORT).show();
+				Toast.makeText(HomeActivity.this, R.string.addsuccessful, Toast.LENGTH_SHORT).show();
 			}
 		}
 		
@@ -147,15 +147,15 @@ public class HomeActivity extends Activity {
 		/**
 		 * group title
 		 */
-		String []group_title=new String[]{"联系人","写邮件","收件箱"};
+		int[] group_title= new int[]{R.string.contact, R.string.writeNewEmail,R.string.mail_box};
 		
 		/**
 		 * child text
 		 */
-		String [][] child_text=new String [][]{
-				{"联系人列表","添加联系人"},
-				{"新邮件","草稿箱"},
-				{"全部邮件","未读邮件","已读邮件"},};
+		int[][] child_text= new int[][]{
+				{R.string.contact,R.string.addNewContact},
+				{R.string.writeNewEmail,R.string.drafts},
+				{R.string.allemails,R.string.unreademails,R.string.alreadyreademails},};
 		int [][] child_icons=new int[][]{
 				{R.drawable.listlianxiren,R.drawable.tianjia},
 				{R.drawable.xieyoujian,R.drawable.caogaoxiang},
