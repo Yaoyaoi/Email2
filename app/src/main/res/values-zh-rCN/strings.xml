@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Email</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="emailaddress">邮件地址</string>
+    <string name="emailpassword">密码</string>
+    <string name="emaillogin">登入</string>
+    <string name="rememberPassword">记住密码</string>
+    <string name="autoLogin">自动登入</string>
+    <string name="tv_title">虫虫邮箱</string>
+    <string name="tv_online">所有在线好友</string>
+    <string name="back">返回</string>
+    <string name="send">发送</string>
+    <string name="tv_t">收件人:</string>
+    <string name="tv_f">发件人:</string>
+    <string name="tv_zhuti">主题:</string>
+    <string name="attachment">附件</string>
+    <string name="content">正  文</string>
+    <string name="tv_new">新</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_relay">回复/转发</string>
+    <string name="mail_box">收件箱</string>
+    <string name="writeNewEmail">写新邮件</string>
+    <string name="mail_content">邮件</string>
+    <string name="btn_replay">回复</string>
+    <string name="constant">联系人</string>
+    <string name="choose">确定</string>
+    <string name="drafts">草稿箱</string>
+    <string name="name">姓名：</string>
+    <string name="example">例如：张三</string>
+    <string name="address">邮箱地址：</string>
+    <string name="addNewContact">添加新的联系人</string>
+    <string name="cannotbeempty">用户名不能为空</string>
+    <string name="wrongaddress">邮箱格式不正确</string>
+    <string name="addsuccessful">添加数据成功</string>
+    <string name="contact">联系人</string>
+    <string name="newContact">添加新的联系人</string>
+    <string name="allemails">全部邮件</string>
+    <string name="unreademails">未读邮件</string>
+    <string name="alreadyreademails">已读邮件</string>
+</resources>

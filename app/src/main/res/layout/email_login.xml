@@ -82,24 +82,25 @@
               android:id="@+id/remenberPassword"
               android:layout_height="wrap_content"
               android:layout_width="wrap_content"
-              android:text="@string/remenberPassword"/>
-          <CheckBox 
-              android:id="@+id/autoLogin"
-              android:layout_height="wrap_content"
-              android:layout_width="wrap_content"
-              android:text="@string/autoLogin"
-              android:layout_marginLeft="100dip"/>
-          </FrameLayout>
-        
-        <Button 
-            android:id="@+id/login_btn" 
-            android:layout_width="fill_parent" 
-            android:layout_height="46.0dip" 
-            android:layout_marginLeft="10.0dip" 
-            android:layout_marginTop="15.0dip" 
-            android:layout_marginRight="10.0dip" 
-            android:text="@string/emaillogin" 
-            style="@style/btn_login" />
-  </LinearLayout>
+              android:text="@string/rememberPassword"/>
+
+            <CheckBox
+                android:id="@+id/autoLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="200dip"
+                android:text="@string/autoLogin" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            style="@style/btn_login"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="15.0dip"
+            android:layout_marginRight="10.0dip"
+            android:text="@string/emaillogin" />
+    </LinearLayout>
 
 </LinearLayout>
